@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: vintage --default;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.font-retro {
+  font-family: 'VT323', monospace;
+}
+
+/* Scanline overlay effect */
+.scanlines {
+  position: relative;
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* CRT flicker animation */
+@keyframes crt-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.85; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+
+.crt-effect {
+  animation: crt-flicker 10s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Pixel art border */
+.pixel-card {
+  image-rendering: pixelated;
+  border-style: solid;
+  border-width: 4px;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+}
+
+/* Scrolling marquee */
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes scroll-marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: scroll-marquee 25s linear infinite;
+  white-space: nowrap;
+}
+
+/* Twinkling stars */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.star { animation: twinkle 2s ease-in-out infinite; }
+.star:nth-child(2) { animation-delay: 0.4s; }
+.star:nth-child(3) { animation-delay: 0.8s; }
+.star:nth-child(4) { animation-delay: 1.2s; }
+.star:nth-child(5) { animation-delay: 1.6s; }
+.star:nth-child(6) { animation-delay: 2.0s; }
+
+/* Glitch effect on hover */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; }
+  25% { text-shadow: -2px 0 red, 2px 0 blue; }
+  50% { text-shadow: 2px 2px red, -2px -2px blue; }
+  75% { text-shadow: -2px 2px red, 2px -2px blue; }
+  100% { text-shadow: 2px 0 red, -2px 0 blue; }
+}
+
+.glitch-hover:hover {
+  animation: glitch 0.3s infinite;
+}
+
+/* Pixel progress bar */
+.pixel-progress {
+  height: 20px;
+  border: 3px solid currentColor;
+  position: relative;
+}
