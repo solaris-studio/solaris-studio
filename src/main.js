@@ -187,7 +187,7 @@ document.querySelector('#app').innerHTML = `
 <nav class="navbar bg-base-100 border-b-4 border-base-content sticky top-0 z-50 px-4 lg:px-8">
   <div class="navbar-start">
     <a href="#hero" class="glitch-hover flex items-center">
-      <img src="/solaris-logo.png" alt="Solaris Studio" class="h-10 w-auto" />
+      <img src="/solaris-studio/solaris-logo.png" alt="Solaris Studio" class="h-10 w-auto" />
     </a>
   </div>
   <div class="navbar-end hidden md:flex gap-4">
@@ -230,7 +230,7 @@ document.querySelector('#app').innerHTML = `
 
     <!-- Logo -->
     <img
-      src="/solaris-logo.png"
+      src="/solaris-studio/solaris-logo.png"
       alt="Solaris Studio"
       class="w-64 md:w-80 drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
     />

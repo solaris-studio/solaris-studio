@@ -109,6 +109,6 @@ body {
 }
 
 .isotope-aventure {
-  background-image: url("./assets/isotope-aventure.png");
+  background-image: url("../public/isotope-aventure.png");
   background-size: cover;
 }
