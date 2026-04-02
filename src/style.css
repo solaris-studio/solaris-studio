@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: vintage --default;
+  themes: synthwave --default;
 }
 
 :root {
@@ -84,22 +84,9 @@ body {
 
 .marquee-content {
   display: inline-block;
-  animation: scroll-marquee 25s linear infinite;
+  animation: scroll-marquee 30s linear infinite;
   white-space: nowrap;
 }
-
-/* Twinkling stars */
-@keyframes twinkle {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
-}
-
-.star { animation: twinkle 2s ease-in-out infinite; }
-.star:nth-child(2) { animation-delay: 0.4s; }
-.star:nth-child(3) { animation-delay: 0.8s; }
-.star:nth-child(4) { animation-delay: 1.2s; }
-.star:nth-child(5) { animation-delay: 1.6s; }
-.star:nth-child(6) { animation-delay: 2.0s; }
 
 /* Glitch effect on hover */
 @keyframes glitch {
@@ -119,4 +106,9 @@ body {
   height: 20px;
   border: 3px solid currentColor;
   position: relative;
+}
+
+.isotope-aventure {
+  background-image: url("./assets/isotope-aventure.png");
+  background-size: cover;
 }
