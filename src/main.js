@@ -232,7 +232,8 @@ document.querySelector('#app').innerHTML = `
     <img
       src="/solaris-studio/solaris-logo.png"
       alt="Solaris Studio"
-      class="w-64 md:w-80 drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
+      class="md:w-80 drop-shadow-[0_8px_24px_rgba(0,0,0,0.5)]"
+      style="width: 100%"
     />
 
     <!-- Tagline -->

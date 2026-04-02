@@ -40,20 +40,6 @@ body {
   z-index: 1;
 }
 
-/* CRT flicker animation */
-@keyframes crt-flicker {
-  0%, 100% { opacity: 1; }
-  92% { opacity: 1; }
-  93% { opacity: 0.85; }
-  94% { opacity: 1; }
-  96% { opacity: 0.9; }
-  97% { opacity: 1; }
-}
-
-.crt-effect {
-  animation: crt-flicker 10s infinite;
-}
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -109,6 +95,6 @@ body {
 }
 
 .isotope-aventure {
-  background-image: url("../public/isotope-aventure.png");
+  background-image: url("/isotope-aventure.png");
   background-size: cover;
 }
